@@ -1,0 +1,3 @@
+[submodule "modules/crediya-common"]
+	path = modules/crediya-common
+	url = https://github.com/luismoroco/crediya-common.git
