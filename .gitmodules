@@ -4,3 +4,6 @@
 [submodule "modules/crediya-gateway"]
 	path = modules/crediya-gateway
 	url = https://github.com/luismoroco/crediya-gateway.git
+[submodule "modules/crediya-auth"]
+	path = modules/crediya-auth
+	url = https://github.com/luismoroco/crediya-auth.git
