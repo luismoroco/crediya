@@ -7,3 +7,6 @@
 [submodule "modules/crediya-auth"]
 	path = modules/crediya-auth
 	url = https://github.com/luismoroco/crediya-auth.git
+[submodule "modules/crediya-applications"]
+	path = modules/crediya-applications
+	url = https://github.com/luismoroco/crediya-applications.git
