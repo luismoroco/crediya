@@ -1,23 +1,23 @@
-environment_context: local
+environment_context: docker
 
 # crediya-auth
-crediya_auth_port: 8081
+crediya_auth_port: 8080
 crediya_auth_host: crediya-auth
 
 crediya_auth_jwt_secret_key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
 crediya_auth_jwt_expiration: 86400000
 
-crediya_auth_db_host: localhost
+crediya_auth_db_host: postgres-crediya-auth
 crediya_auth_db_port: 5432
 crediya_auth_db_user: admin
 crediya_auth_db_password: admin123
 crediya_auth_db_name: crediya
 
 # crediya-applications
-crediya_applications_port: 8082
+crediya_applications_port: 8080
 crediya_applications_host: crediya-applications
 
-crediya_applications_db_host: localhost
+crediya_applications_db_host: postgres-crediya-applications
 crediya_applications_db_port: 5432
 crediya_applications_db_user: admin
 crediya_applications_db_password: admin123

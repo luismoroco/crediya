@@ -2,7 +2,7 @@
   hosts: localhost
   become: no
   vars_files:
-    - ../inventory/local.yml
+    - "../inventory/{{ environment }}.yml"
   tasks:
     - name: Configure crediya-auth
       template:
