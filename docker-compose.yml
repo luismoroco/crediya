@@ -16,18 +16,18 @@ services:
     networks:
       - crediya-backend
 
-#  crediya-auth:
-#    container_name: crediya-auth
-#    build:
-#      context: modules/crediya-auth
-#      dockerfile: deployment/Dockerfile
-#    image: crediya-auth:1.0.0
-#    networks:
-#      - crediya-backend
-#    depends_on:
-#      - postgres-crediya-auth
-#    ports:
-#      - "8081:8080"
+  crediya-auth:
+    container_name: crediya-auth
+    build:
+      context: modules/crediya-auth
+      dockerfile: deployment/Dockerfile
+    image: crediya-auth:1.0.0
+    networks:
+      - crediya-backend
+    depends_on:
+      - postgres-crediya-auth
+    ports:
+      - "8081:8080"
 
   postgres-crediya-applications:
     container_name: postgres-crediya-applications
@@ -44,18 +44,24 @@ services:
     networks:
       - crediya-backend
 
-#  crediya-applications:
-#    container_name: crediya-applications
-#    build:
-#      context: modules/crediya-applications
-#      dockerfile: deployment/Dockerfile
-#    image: crediya-applications:1.0.0
-#    networks:
-#      - crediya-backend
-#    depends_on:
-#      - postgres-crediya-applications
-#    ports:
-#      - "8082:8080"
+  crediya-applications:
+    container_name: crediya-applications
+    build:
+      context: modules/crediya-applications
+      dockerfile: deployment/Dockerfile
+      args:
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+        AWS_REGION: ${AWS_REGION}
+    image: crediya-applications:1.0.0
+    networks:
+      - crediya-backend
+    depends_on:
+      - postgres-crediya-applications
+    ports:
+      - "8082:8080"
+    env_file:
+      - .env
 
 networks:
   crediya-backend:

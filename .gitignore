@@ -1,1 +1,3 @@
 ./infrastructure/inventory/prod.yml
+
+.env
