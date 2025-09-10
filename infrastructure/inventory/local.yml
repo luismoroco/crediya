@@ -2,7 +2,7 @@ environment_context: local
 
 # crediya-auth
 crediya_auth_port: 8081
-crediya_auth_host: crediya-auth
+crediya_auth_host: localhost
 
 crediya_auth_jwt_secret_key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
 crediya_auth_jwt_expiration: 86400000
@@ -22,3 +22,7 @@ crediya_applications_db_port: 5432
 crediya_applications_db_user: admin
 crediya_applications_db_password: admin123
 crediya_applications_db_name: crediya
+
+# aws
+aws_sqs_crediya_sqs_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs
+aws_sqs_crediya_sqs_region: us-east-1

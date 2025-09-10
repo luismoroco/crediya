@@ -22,3 +22,7 @@ crediya_applications_db_port: 5432
 crediya_applications_db_user: admin
 crediya_applications_db_password: admin123
 crediya_applications_db_name: crediya
+
+# aws
+aws_sqs_crediya_sqs_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs
+aws_sqs_crediya_sqs_region: us-east-1
