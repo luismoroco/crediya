@@ -17,8 +17,8 @@ services:
 
   crediya-auth:
     build:
-      context: .
-      dockerfile: modules/crediya-auth/deployment/Dockerfile
+      context: modules/crediya-auth
+      dockerfile: deployment/Dockerfile
     image: crediya-auth:1.0.0
     networks:
       - crediya-backend
@@ -43,8 +43,8 @@ services:
 
   crediya-applications:
     build:
-      context: .
-      dockerfile: modules/crediya-applications/deployment/Dockerfile
+      context: modules/crediya-applications
+      dockerfile: deployment/Dockerfile
     image: crediya-applications:1.0.0
     networks:
       - crediya-backend
