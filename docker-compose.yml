@@ -16,6 +16,7 @@ services:
       - crediya-backend
 
   crediya-auth:
+    container_name: crediya-auth
     build:
       context: modules/crediya-auth
       dockerfile: deployment/Dockerfile
@@ -42,6 +43,7 @@ services:
       - crediya-backend
 
   crediya-applications:
+    container_name: crediya-applications
     build:
       context: modules/crediya-applications
       dockerfile: deployment/Dockerfile
