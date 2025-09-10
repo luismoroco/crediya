@@ -1,0 +1,16 @@
+- name: Configure environment
+  hosts: localhost
+  become: no
+  vars_files:
+    - ../inventory/local.yml
+  tasks:
+    - name: Configure crediya-auth
+      template:
+        src: ../templates/modules/crediya-auth/.env.j2
+        dest: ../../modules/crediya-auth/.env
+
+    - name: Configure crediya-applications
+      template:
+        src: ../templates/modules/crediya-applications/.env.j2
+        dest: ../../modules/crediya-applications/.env
+
