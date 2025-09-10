@@ -18,7 +18,7 @@ crediya_applications_port: 8082
 crediya_applications_host: crediya-applications
 
 crediya_applications_db_host: localhost
-crediya_applications_db_port: 5432
+crediya_applications_db_port: 5433
 crediya_applications_db_user: admin
 crediya_applications_db_password: admin123
 crediya_applications_db_name: crediya

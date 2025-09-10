@@ -10,6 +10,7 @@ services:
       - POSTGRES_DB=postgres
     volumes:
       - ./modules/crediya-auth/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./volume/postgres-crediya-auth:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
@@ -37,6 +38,7 @@ services:
       - POSTGRES_DB=postgres
     volumes:
       - ./modules/crediya-applications/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./volume/postgres-crediya-applications:/var/lib/postgresql/data
     ports:
       - "5433:5432"
     networks:
