@@ -12,6 +12,20 @@ services:
       - ./modules/crediya-auth/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
+    networks:
+      - crediya-backend
+
+  crediya-auth:
+    build:
+      context: .
+      dockerfile: modules/crediya-auth/deployment/Dockerfile
+    image: crediya-auth:1.0.0
+    networks:
+      - crediya-backend
+    depends_on:
+      - postgres-crediya-auth
+    ports:
+      - "8081:8080"
 
   postgres-crediya-applications:
     container_name: postgres-crediya-applications
@@ -24,3 +38,21 @@ services:
       - ./modules/crediya-applications/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5433:5432"
+    networks:
+      - crediya-backend
+
+  crediya-applications:
+    build:
+      context: .
+      dockerfile: modules/crediya-applications/deployment/Dockerfile
+    image: crediya-applications:1.0.0
+    networks:
+      - crediya-backend
+    depends_on:
+      - postgres-crediya-applications
+    ports:
+      - "8082:8080"
+
+networks:
+  crediya-backend:
+    driver: bridge
