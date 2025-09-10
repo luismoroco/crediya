@@ -9,8 +9,18 @@
         src: ../templates/modules/crediya-auth/.env.j2
         dest: ../../modules/crediya-auth/.env
 
+    - name: Configure crediya-auth database
+      template:
+        src: ../templates/modules/crediya-auth/setup/setup.sql.j2
+        dest: ../../modules/crediya-auth/setup/setup.sql
+
     - name: Configure crediya-applications
       template:
         src: ../templates/modules/crediya-applications/.env.j2
         dest: ../../modules/crediya-applications/.env
+
+    - name: Configure crediya-applications database
+      template:
+        src: ../templates/modules/crediya-applications/setup/setup.sql.j2
+        dest: ../../modules/crediya-applications/setup/setup.sql
 

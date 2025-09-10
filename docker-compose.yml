@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=admin123
       - POSTGRES_DB=postgres
     volumes:
-      - ./database/setup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./modules/crediya-auth/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
 
@@ -21,6 +21,6 @@ services:
       - POSTGRES_PASSWORD=admin123
       - POSTGRES_DB=postgres
     volumes:
-      - ./database/setup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./modules/crediya-applications/setup/setup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5433:5432"
