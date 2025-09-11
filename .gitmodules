@@ -13,3 +13,6 @@
 [submodule "modules/crediya-domain-common"]
 	path = modules/crediya-domain-common
 	url = https://github.com/luismoroco/crediya-domain-common.git
+[submodule "modules/crediya-notifications"]
+	path = modules/crediya-notifications
+	url = https://github.com/luismoroco/crediya-notifications.git
