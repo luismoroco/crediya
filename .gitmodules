@@ -16,3 +16,6 @@
 [submodule "modules/crediya-notifications"]
 	path = modules/crediya-notifications
 	url = https://github.com/luismoroco/crediya-notifications.git
+[submodule "modules/crediya-risk-analysis"]
+	path = modules/crediya-risk-analysis
+	url = https://github.com/luismoroco/crediya-risk-analysis.git
