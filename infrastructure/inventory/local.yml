@@ -15,7 +15,7 @@ crediya_auth_db_name: crediya
 
 # crediya-applications
 crediya_applications_port: 8082
-crediya_applications_host: crediya-applications
+crediya_applications_host: localhost
 
 crediya_applications_db_host: localhost
 crediya_applications_db_port: 5433
@@ -23,8 +23,13 @@ crediya_applications_db_user: admin
 crediya_applications_db_password: admin123
 crediya_applications_db_name: crediya
 
+# crediya-applications
+crediya_reporting_port: 8083
+crediya_reporting_host: localhost
+
 # aws
 aws_sqs_crediya_sqs_region: us-east-1
 aws_sqs_crediya_sqs_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs
 aws_sqs_crediya_risk_analysis_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs-risk-analysis
 aws_sqs_crediya_sqs_listener_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs-listener
+aws_sqs_crediya_sqs_reporting_queue_url: https://sqs.us-east-1.amazonaws.com/416806138924/crediya-sqs-reporting

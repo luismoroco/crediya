@@ -63,6 +63,23 @@ services:
 #    env_file:
 #      - .env
 
+#  crediya-reporting:
+#    container_name: crediya-reporting
+#    build:
+#      context: modules/crediya-reporting
+#      dockerfile: deployment/Dockerfile
+#      args:
+#        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+#        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+#        AWS_REGION: ${AWS_REGION}
+#    image: crediya-reporting:1.0.0
+#    networks:
+#      - crediya-backend
+#    ports:
+#      - "8083:8080"
+#    env_file:
+#      - .env
+
 networks:
   crediya-backend:
     driver: bridge

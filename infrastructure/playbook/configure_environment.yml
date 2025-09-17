@@ -24,3 +24,7 @@
         src: ../templates/modules/crediya-applications/setup/setup.sql.j2
         dest: ../../modules/crediya-applications/setup/setup.sql
 
+    - name: Configure crediya-reporting
+      template:
+        src: ../templates/modules/crediya-reporting/.env.j2
+        dest: ../../modules/crediya-reporting/.env
